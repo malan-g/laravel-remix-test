@@ -8,9 +8,19 @@
     </head>
     <body>
        Laravel Backend - OK
+        <br/>
+        <br/>
+        <div>
+            <a href="/tasks">See /tasks API response</a>
+        </div>
 
-       <br/>
-       <br/>
-       <a href="/tasks">See /tasks API response</a>
+        <ul>
+            @for($i = 1; $i < 5; $i++)
+                <li>
+                    <a href="/tasks/{{$i}}"> /tasks/{{$i}} </a>
+                </li>
+                <br/>
+            @endfor
+       </ul>
     </body>
 </html>
