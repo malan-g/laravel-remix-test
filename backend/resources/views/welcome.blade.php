@@ -8,5 +8,9 @@
     </head>
     <body>
        Laravel Backend - OK
+
+       <br/>
+       <br/>
+       <a href="/tasks">See /tasks API response</a>
     </body>
 </html>

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Http\Resources\TaskCollection;
+use App\Models\Task;
 
 
 /*
@@ -15,10 +17,14 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
-Route::get('/', [TaskController::class, 'show']);
+
+
+Route::get('/tasks', function() {
+    return new TaskCollection(Task::all());
+});
 
